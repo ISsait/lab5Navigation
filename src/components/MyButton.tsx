@@ -6,13 +6,14 @@ import {
 } from 'react-native';
 
 type MyButtonParams = {
+    bgColor?: string;
     title: string;
     onPress: () => void;
 };
 
 function MyButton(params : MyButtonParams) : React.JSX.Element {
     return (
-        <TouchableOpacity style={styles.button} onPress={params.onPress}>
+        <TouchableOpacity style={[styles.button, {backgroundColor: params.bgColor}]} onPress={params.onPress}>
             <Text style={styles.text}>{params.title}</Text>
         </TouchableOpacity>
     );
@@ -20,10 +21,9 @@ function MyButton(params : MyButtonParams) : React.JSX.Element {
 
 const styles = StyleSheet.create({
     button: {
-        backgroundColor: 'green',
+        backgroundColor: 'blue',
         padding: 10,
         borderRadius: 5,
-        width: 200,
         alignSelf: 'center',
     },
     text: {

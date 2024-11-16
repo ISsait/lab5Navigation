@@ -5,17 +5,20 @@ import {
     StyleSheet,
 } from 'react-native';
 import MyButton from '../components/MyButton';
+import MainLayout from '../layouts/MainLayout';
 
 
-export default function HomeScreen({navigation} : {navigation: any}) : React.JSX.Element {
+export default function HomeScreen({initialParams, navigation} : {initialParams : any, navigation: any}) : React.JSX.Element {
   return (
-    <View style={styles.container}>
-        <ToDoForm />
-          <MyButton title="About" onPress={() => {
-            console.log('About button pressed');
-            navigation.navigate('About');
-            }}/>
-    </View>
+    <MainLayout>
+      <View style={styles.container}>
+          <ToDoForm props={initialParams}/>
+            <MyButton title="About" onPress={() => {
+              console.log('About button pressed');
+              navigation.navigate('About');
+              }}/>
+      </View>
+    </MainLayout>
   );
 }
 

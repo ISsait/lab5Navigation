@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
         marginTop: 20,
     },
     addTaskTouchableOpacity: {
-        backgroundColor: 'green',
+        backgroundColor: 'blue',
         padding: 10,
         borderRadius: 5,
     },
@@ -90,6 +90,7 @@ const styles = StyleSheet.create({
         padding: 10,
         width: '70%',
         borderRadius: 5,
+        backgroundColor: 'white',
     },
     clearTouchableOpacity: {
         backgroundColor: 'red',

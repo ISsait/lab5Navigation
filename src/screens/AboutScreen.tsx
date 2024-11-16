@@ -4,25 +4,28 @@ import {
     Text,
     StyleSheet,
 } from 'react-native';
+import MainLayout from '../layouts/MainLayout';
 
 
 
-export default function AboutScreen() : React.JSX.Element {
+export default function AboutScreen({route} : {route : any}) : React.JSX.Element {
   return (
-    <View style={styles.container}>
-        <View style={styles.textView}>
-            <Text style={[styles.text, {fontSize: 18}]}>This is a simple application called </Text>
-            <Text style={[styles.text,{fontWeight: 'bold'}]}>To Do List</Text>
+    <MainLayout>
+      <View style={styles.container}>
+          <View style={styles.textView}>
+              <Text style={[styles.text, {fontSize: 18}]}>This is a simple application called </Text>
+              <Text style={[styles.text,{fontWeight: 'bold'}]}>To Do List</Text>
+          </View>
+          <View style={styles.textView}>
+              <Text style={[styles.text, {fontSize: 18}]}>Created By: </Text>
+              <Text style={[styles.text,{fontWeight: 'bold'}]}>Ian Stoesz</Text>
+          </View>
+          <View style={styles.textView}>
+              <Text style={[styles.text, {fontSize: 18}]}>Date Created:  </Text>
+              <Text style={[styles.text,{fontWeight: 'bold'}]}>November 15, 2024</Text>
+          </View>
         </View>
-        <View style={styles.textView}>
-            <Text style={[styles.text, {fontSize: 18}]}>Created By: </Text>
-            <Text style={[styles.text,{fontWeight: 'bold'}]}>Ian Stoesz</Text>
-        </View>
-        <View style={styles.textView}>
-            <Text style={[styles.text, {fontSize: 18}]}>Date Created:  </Text>
-            <Text style={[styles.text,{fontWeight: 'bold'}]}>November 15, 2024</Text>
-        </View>
-      </View>
+      </MainLayout>
   );
 }
 
